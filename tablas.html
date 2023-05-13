@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/tablas.css"> <!--No olvidar enlazar los estilos-->
+    <title>PRACTICA DE TABLAS</title>
+</head>
+<body>
+    <h1>"INTRODUCCIÓN A LAS TABLAS, VINCULOS DE ANCLAJE EN HTML E HIPERVINCULOS"</h1> 
+    <!--Las tablas son un conjunto estructurado de datos compuestos por filas y columnas-->
+    <!--
+                        FILAS
+        _________________________________________
+     C |         |               |               |
+     O |_________|_______________|_______________|
+     L |         |               |               |
+     U |_________|_______________|_______________|
+     M |         |               |               |
+     N |_________|_______________|_______________|
+     A |         |               |               |
+     S |_________|_______________|_______________|
+    -->
+
+    <caption>TABLA DE NOMBRES</caption> <!--Representa un TITULO descriptivo de una tabla-->
+
+    <table> <!--Aqui se abre la tabla o se crea el elemento de tabla.-->
+
+        <tr> <!--Aqui se abre la primera fila y tr representa una fila.-->
+            <th>Nombre</th> <!-- th representa las celdas de encabezado.-->
+            <th>Apellido</th> <!-- El texto aqui queda en negritas-->
+        </tr> <!--Aqui se cierra la fila-->
+
+        <tr> <!--Aqui se abre la segunda fila-->
+             <td>Mariana</td> <!--td representa las celdas de datos.-->
+             <td>Valladolid</td> 
+        </tr> 
+
+        <tr> <!--Aqui se abre la tercera fila--> 
+             <td>Jose</td>
+             <td>Garcia</td> 
+        </tr> 
+    </table> <!--Aqui se cierra la tabla-->
+    <br>
+    <br>
+
+    <table> <!--Aqui se abre la segunda tabla-->
+        <p>Tabla simple con encabezado, YO soy un PARRAFO</p> <!--Representa un parrafo de descrpcion-->
+
+        <thead> <!--thead esta etiqueta agrupa los elementos de la cabecera en la tabla, le da una mejor visualización a la celda-->
+            <tr>
+                <th colspan="3">Encabezado de tablas</th><!--colspan permite expandir las celdas de datos o de encabezados al número de columnas que deseemos que ocupe-->
+            </tr>
+        </thead> <!--Aqui se cierra la agrupacion de la cabecera-->
+
+        <tbody> <!--esta etiqueta agrupa los elementos de contenido en la tabla.-->
+            <tr>
+                <td>El cuerpo de la tabla</td>
+                <td>con 2 columnas</td>
+                <td>y con 3 columnas</td>
+            </tr>
+        </tbody> <!--Aqui se cierra la agrupación del contenido-->
+    </table> <!--Aqui se cierra la tabla-->
+    <br>
+    <br>
+    
+    <caption> Tabla de nombres</caption> <!--representa un título descriptivo en una tabla.-->
+
+    <p>Tabla con "thead", "tfoot", y "tbody", tambien soy un parrafo</p> <!--Nuevamente un parrafo de descrpcion-->
+    <table> <!--Se abre la tabla-->
+
+      <thead> <!--Se abre la agrupación de la cabecera-->
+        <tr>
+          <th>Header content 1</th> <!--Encabezados en la primera fila-->
+          <th>Header content 2</th>
+        </tr>
+      </thead> <!--Aqui se cierra agrupación-->
+      
+      <tbody> <!--Se abre la agrupación del contenido de la tabla-->
+        <tr>
+          <td>Body content 1</td>
+          <td>Body content 2</td>
+        </tr>
+      </tbody> <!--Aqui se cierra agrupación-->
+      
+      <tfoot><!--tfoot esta etiqueta agrupa los elementos de pie en la tabla-->
+        <tr>
+          <td>Footer content 1</td>
+          <td>Footer content 2</td>
+        </tr>
+      </tfoot>
+    </table> <!--Aqui se cierra la tabla-->
+    
+    <p>Table with colgroup, tambien soy un parrafo</p>
+    <table>
+      <colgroup span="4"></colgroup> <!--Para aplicar una propiedad a más de una columna no es necesario repetir la propiedad en cada elemento <col>. Lo más sencillo es aplicarle el atributo span al primer elemento <col>. Este atributo funciona igual que rowspan y colspan, es decir, nos permite expandir la influencia de <col> al número de columnas que queramos.-->
+      
+      <tr> <!--Aqui se abre el encabezado de la tabla en la primera fila-->
+        <th>Countries</th>
+        <th>Capitals</th>
+        <th>Population</th>
+        <th>Language</th>
+      </tr>
+      
+      <tr> <!--Aqui se abre la segunda fila-->
+        <td>USA</td>
+        <td>Washington, D.C.</td>
+        <td>309 million</td>
+        <td>English</td>
+      </tr>
+      
+      <tr> <!--Aqui se abre la tercera fila-->
+        <td>Sweden</td>
+        <td>Stockholm</td>
+        <td>9 million</td>
+        <td>Swedish</td>
+      </tr>
+    </table> <!--Aqui se cierra la tabla-->
+    
+    
+    <p>Table with colgroup and col, sou un parrafito</p>
+    <table> <!--Aqui se abre la tabla-->
+      <colgroup><!--El elemento <col> se especifica dentro de un bloque <colgroup>, justo debajo de la apertura <table>.-->
+        <col style="background-color: #0f0" /> <!--Este elemento nos permite especificar propiedades de estilo para toda una columna. Sin este elemento tendríamos que especificar el estilo en cada celda <th> o <td> de la columna que queramos estilizar. -->
+          <col span="3" />
+      </colgroup>
+      
+      <tr>
+        <th>Lima</th>
+        <th>Limon</th>
+        <th>Naranja</th>
+      </tr>
+        
+      <tr>
+        <td>Green</td>
+        <td>Yellow</td>
+        <td>Orange</td>
+      </tr>
+
+      <tr>
+        <td>Green2</td>
+        <td>Yellow2</td>
+        <td>Orange2</td>
+      </tr>
+    </table> <!--Aqui se cierra la tabla-->
+    
+    <div align="center"> <!--Este div me permite darle formato a todo lo que este entre las etiquetas, en este caso se esta utilizando para centrar el parrafo y la tabla completa, primera vez usandolo de forma conciente jeje-->
+    
+      <p>Cuadro sencillo con leyenda(caption)</p>
+  
+    <table>
+      <caption>
+        Subtítulo impresionante
+      </caption>
+      
+      <tr>
+        <td>Dato Impresionante, soy una celda</td>
+      </tr>
+    </table>
+  </div>
+
+    <br>
+    <br>
+    <!--
+
+    cellspacing: Nos permite establecer el espacio entre las celdas.
+    cellpadding: Nos permite establecer el espacio entre los bordes de las celdas.
+    border: Nos permite establecer el borde de la tabla, el valor por defecto es 1, pero puede ser cualquier otro valor.
+    bgcolor: Nos permite establecer el color de fondo de la tabla.
+    colspan: Nos permite establecer la cantidad de columnas que ocupara la celda. *similar al combinar celdas de excel
+    rowspan: Nos permite establecer la cantidad de filas que ocupara la celda. *similar al combinar celdas de excel
+  -->
+    <br>
+    
+    <hr> <!--El elemento HTML <hr> representa un cambio de tema entre párrafos (por ejemplo, un cambio de escena en una historia, un cambio de tema en una sección). En versiones previas de HTML representaba una línea horizontal-->
+    
+    <h1>"Vinculos de Anclaje"</h1> <!--Soy un titulo-->
+<!--
+  De forma predeterminada, la página vinculada se mostrará en la ventana actual del navegador. Para cambiar esto, debe especificar otro destino para el vínculo.
+
+El targetatributo especifica dónde abrir el documento vinculado.
+
+El targetatributo puede tener uno de los siguientes valores:
+
+_self- Por defecto. Abre el documento en la misma ventana/pestaña en la que se hizo clic
+_blank- Abre el documento en una nueva ventana o pestaña
+_parent- Abre el documento en el marco principal
+_top- Abre el documento en el cuerpo completo de la ventana.
+-->
+    <div align="center" style="border: 03px ridge rgb(8, 8, 8); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <!--Agregar una identificación con un nombre de anclaje-->
+      <!--<a id="nombre-anclaje"> Aquí el nombre de la sección a la que quieres brincar </a>-->
+      <a id="nombre-anclaje"> Aqui estamos en la sección de "El perrito del mes"</a>
+    </div><br>
+
+    <div align="center" style="border: 03px ridge rgb(8, 8, 8); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <!--Un anclaje en una cabecera-->
+      <!--<h4 id="nombre-anclaje">Nombre de la sección</h4>-->
+      <h4 id="nombre-anclaje">Perrito del mes</h4>
+    </div> <br>
+    
+    <div align="center" style="border: 03px ridge rgb(8, 8, 8);">
+    <!--Anclaje en una imagen-->
+      <img id="image-G" src="./Assets/frijolito.webp" alt="Will" title="frijolito" width="400" height="500" />
+    </div>
+    
+    <div align="center" style="border: 03px ridge rgb(8, 8, 8);">
+    <!--anclaje en un párrafo-->
+      <!--<p id="nombre-anclaje">Nombre del párrafo</p>-->
+      <p id="nombre-anclaje">Soy el perrito mas bonito del mes, admirame por favor</p>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Soy un parrafo de relleno</p><br>
+      <p>Para ampliar y se parar las secciones</p><br>
+    </div> <br>
+    
+    <div align="center" style="border: 03px ridge rgb(8, 8, 8); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <!--Crear un hipervínculo utilizando el identificador del objetivo del vínculo, precedido por #-->
+      <!--<a href="#nombre-anclaje">Brincar a la parte de la página con “nombre-anclaje” id </a>-->
+      <a href="#nombre-anclaje">Brinca a la parte de la página del "Perrito del mes y admiralo nuevamente" </a>
+    </div> <br>
+    <br>
+    <br>
+    
+    <hr>
+    <h2>Pastel de Chocolate de Costco</h2>
+    <div align="center">
+      <p>Para conocer los ingredientes, haz clic <a target="_blank" href="tablas2.html">aqui</a>.</p> <!--Estamos agregando el target _blank para abrir en otra ventana en esta ocasión-->
+    </div>
+    <br>
+
+    <h2>Jokeis de Ihop</h2>
+    <div align="center">
+      <p>Para conocer los ingredientes, haz clic <a href="tablas3.html">aqui</a>.</p> <!--Aqui no estamos abriendo en otra ventana-->
+    </div>
+    <br>
+</body>
+</html>
